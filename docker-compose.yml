@@ -1,0 +1,19 @@
+version: '3'
+services:
+  back-end:
+    build: ./back-end
+    ports:
+      - 8000:8000
+    volumes:
+      - vol-back-end:/usr/src/app
+       
+    
+
+volumes:
+  vol-back-end:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/devup/Desktop/django-react-tuto/volumes/vol-back-end
+      o: bind
+    
